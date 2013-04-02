@@ -1,0 +1,158 @@
+{
+	"name":"root",
+	"type":"selector",
+	"items":[
+		{
+			"name":"hashouse?",
+			"type":"selector",
+			"items":[
+				{
+					"name":"Enough Money For New House?",
+					"type":"selector",
+					"items":[
+						{
+							"name":"Yes",
+							"type":"sequence",
+							"items":[
+								{
+									"name":"isHouseNearBy?",
+									"type":"behaviour",
+									"func_name":"print_func",
+									"arg":"New house nearby!",
+									"return":"success"
+								},
+								{
+									"name":"BuyHouse",
+									"type":"behaviour",
+									"func_name":"print_func",
+									"arg":"Buying House...",
+									"return":"success"
+								},
+								{
+									"name":"Move In",
+									"type":"behaviour",
+									"func_name":"print_func",
+									"arg":"Moving into new house...",
+									"return":"success"
+								}								
+							]
+						},
+						{
+							"name":"No",
+							"type":"behaviour",
+							"func_name":"print_func",
+							"arg":"Not enough money for house!",
+							"return":"success"
+						}
+					]
+				},
+				{
+					"name":"Enough Money For New House?",
+					"type":"sequence",
+					"items":[
+						{
+							"name":"isHouseNearBy?",
+							"type":"behaviour",
+							"func_name":"print_func",
+							"arg":"New house nearby!",
+							"return":"success"
+						},
+						{
+							"name":"BuyHouse",
+							"type":"behaviour",
+							"func_name":"print_func",
+							"arg":"Buying House...",
+							"return":"success"
+						},
+						{
+							"name":"Move In",
+							"type":"behaviour",
+							"func_name":"print_func",
+							"arg":"Moving into new house...",
+							"return":"success"
+						}								
+					]
+				}
+			]
+		},
+		{
+			"name":"Food",
+			"type":"selector",
+			"items":[
+				{
+					"name":"Hungry?",
+					"type":"selector",
+					"items":[
+						{
+							"name":"Yes",
+							"type":"sequence",
+							"items":[
+								{
+									"name":"is there food nearby?",
+									"type":"selector",
+									"items":[
+										{
+											"name":"Go To Shop",
+											"type":"behaviour",
+											"func_name":"print_func",
+											"arg":"Moving to shop...",
+											"return":"success"
+										},
+										{
+											"name":"Go To Shop",
+											"type":"behaviour",
+											"func_name":"print_func",
+											"arg":"Moving to shop...",
+											"return":"success"
+										}
+									]
+								},
+								{
+									"name":"Go To Shop",
+									"type":"behaviour",
+									"func_name":"print_func",
+									"arg":"Moving to shop...",
+									"return":"success"
+								},
+								{
+									"name":"Buy Food",
+									"type":"behaviour",
+									"func_name":"print_func",
+									"arg":"Buying food at shop",
+									"return":"success"
+								},
+								{
+									"name":"Eat",
+									"type":"behaviour",
+									"func_name":"print_func",
+									"arg":"Eating...",
+									"return":"success"
+								}
+							]
+						},
+						{
+							"name":"No",
+							"type":"behaviour",
+							"func_name":"print_func",
+							"arg":"Not Hungry",
+							"return":"success"
+						}								
+					]
+				}
+			]
+		},
+		{
+			"name":"Work",
+			"type":"selector",
+			"items":[
+				{
+					"name":"Hungry?",
+					"type":"behaviour",
+					"func_name":"print_func",
+					"arg":"asd",
+					"return":"success"
+				}
+			]
+		}
+	]
+}
