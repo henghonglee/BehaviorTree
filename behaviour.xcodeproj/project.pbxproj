@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EFB3054D1709287700874C36 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB3054C1709287700874C36 /* main.cpp */; };
+		EFB3054D1709287700874C36 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB3054C1709287700874C36 /* main.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EFB3054F1709287700874C36 /* behaviour.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFB3054E1709287700874C36 /* behaviour.1 */; };
+		EFB3055D1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB3055B1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.dylib */; };
+		EFB3055E1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB3055C1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,8 @@
 		EFB305491709287700874C36 /* behaviour */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = behaviour; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB3054C1709287700874C36 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EFB3054E1709287700874C36 /* behaviour.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = behaviour.1; sourceTree = "<group>"; };
+		EFB3055B1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libjson_linux-gcc-4.2.1_libmt.dylib"; path = "../../Downloads/jsoncpp-src-0.5.0/libs/linux-gcc-4.2.1/libjson_linux-gcc-4.2.1_libmt.dylib"; sourceTree = "<group>"; };
+		EFB3055C1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libjson_linux-gcc-4.2.1_libmt.a"; path = "../../Downloads/jsoncpp-src-0.5.0/libs/linux-gcc-4.2.1/libjson_linux-gcc-4.2.1_libmt.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB3055D1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.dylib in Frameworks */,
+				EFB3055E1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,8 @@
 		EFB305401709287700874C36 = {
 			isa = PBXGroup;
 			children = (
+				EFB3055B1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.dylib */,
+				EFB3055C1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.a */,
 				EFB3054B1709287700874C36 /* behaviour */,
 				EFB3054A1709287700874C36 /* Products */,
 			);
@@ -186,6 +194,12 @@
 		EFB305531709287700874C36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/include",
+					"/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/src",
+				);
+				LIBRARY_SEARCH_PATHS = "/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/libs/linux-gcc-4.2.1/";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -193,6 +207,12 @@
 		EFB305541709287700874C36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/include",
+					"/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/src",
+				);
+				LIBRARY_SEARCH_PATHS = "/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/libs/linux-gcc-4.2.1/";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -216,6 +236,7 @@
 				EFB305541709287700874C36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
