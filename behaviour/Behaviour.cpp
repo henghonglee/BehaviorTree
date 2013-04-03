@@ -85,7 +85,7 @@ public:
         luaL_openlibs(L);
         
         /* load the script */
-        luaL_dofile(L, "foo.lua");
+        luaL_dofile(L, func_name.c_str());
         
         /* call the add function */
         sum = luaadd( 10, 15 );
