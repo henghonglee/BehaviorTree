@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF8608DA170AAC2A001D4243 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8608D9170AAC2A001D4243 /* liblua.a */; };
+		EF8608DF170AC47A001D4243 /* Behaviour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF8608DD170AC47A001D4243 /* Behaviour.cpp */; };
 		EFB3054D1709287700874C36 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB3054C1709287700874C36 /* main.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EFB3054F1709287700874C36 /* behaviour.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFB3054E1709287700874C36 /* behaviour.1 */; };
 		EFB3055D1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB3055B1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.dylib */; };
@@ -27,6 +29,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EF8608D9170AAC2A001D4243 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = ../liblua.a; sourceTree = "<group>"; };
+		EF8608DD170AC47A001D4243 /* Behaviour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Behaviour.cpp; sourceTree = "<group>"; };
+		EF8608DE170AC47A001D4243 /* Behaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Behaviour.h; sourceTree = "<group>"; };
 		EFB305491709287700874C36 /* behaviour */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = behaviour; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB3054C1709287700874C36 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EFB3054E1709287700874C36 /* behaviour.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = behaviour.1; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8608DA170AAC2A001D4243 /* liblua.a in Frameworks */,
 				EFB3055D1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.dylib in Frameworks */,
 				EFB3055E1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.a in Frameworks */,
 			);
@@ -50,6 +56,7 @@
 		EFB305401709287700874C36 = {
 			isa = PBXGroup;
 			children = (
+				EF8608D9170AAC2A001D4243 /* liblua.a */,
 				EFB3055B1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.dylib */,
 				EFB3055C1709331700874C36 /* libjson_linux-gcc-4.2.1_libmt.a */,
 				EFB3054B1709287700874C36 /* behaviour */,
@@ -69,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				EFB3054C1709287700874C36 /* main.cpp */,
+				EF8608DD170AC47A001D4243 /* Behaviour.cpp */,
+				EF8608DE170AC47A001D4243 /* Behaviour.h */,
 				EFB3054E1709287700874C36 /* behaviour.1 */,
 			);
 			path = behaviour;
@@ -126,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFB3054D1709287700874C36 /* main.cpp in Sources */,
+				EF8608DF170AC47A001D4243 /* Behaviour.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,8 +208,13 @@
 				HEADER_SEARCH_PATHS = (
 					"/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/include",
 					"/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/src",
+					/usr/local/include,
 				);
-				LIBRARY_SEARCH_PATHS = "/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/libs/linux-gcc-4.2.1/";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/libs/linux-gcc-4.2.1/",
+					/usr/local/lib,
+					"\"$(SRCROOT)/..\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -211,8 +226,13 @@
 				HEADER_SEARCH_PATHS = (
 					"/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/include",
 					"/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/src",
+					/usr/local/include,
 				);
-				LIBRARY_SEARCH_PATHS = "/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/libs/linux-gcc-4.2.1/";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/Kinnovate/Downloads/jsoncpp-src-0.5.0/libs/linux-gcc-4.2.1/",
+					/usr/local/lib,
+					"\"$(SRCROOT)/..\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
