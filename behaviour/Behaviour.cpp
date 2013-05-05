@@ -5,7 +5,7 @@
 //  Created by HengHong on 2/4/13.
 //  Copyright (c) 2013 HengHong. All rights reserved.
 //
-
+//TODO : to be done!
 #include "Behaviour.h"
 extern "C" {
 #include "lua.h"
@@ -102,7 +102,7 @@ public:
         // this is for testing of the json , to input return values. normally return status should be calculated by foo
         m_eStatus = retStatus;
     }
-    
+    //TODO : Change this
     Behavior(){};
     
     Behavior(Status (*food)(std::string)){
