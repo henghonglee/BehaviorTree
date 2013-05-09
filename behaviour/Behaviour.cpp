@@ -5,7 +5,7 @@
 //  Created by HengHong on 2/4/13.
 //  Copyright (c) 2013 HengHong. All rights reserved.
 //
-//TODO : to be done!
+
 #include "Behaviour.h"
 extern "C" {
 #include "lua.h"
@@ -43,7 +43,7 @@ public:
     // ** Implement your own functions here to detect game metrics and variables and decide if a behavior/action is successful ** //
     
 };
-// FIXME: something is wrong with the lua
+
 class Behavior
 {
 public:
