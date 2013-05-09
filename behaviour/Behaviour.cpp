@@ -43,7 +43,7 @@ public:
     // ** Implement your own functions here to detect game metrics and variables and decide if a behavior/action is successful ** //
     
 };
-
+// FIXME: something is wrong with the lua
 class Behavior
 {
 public:
